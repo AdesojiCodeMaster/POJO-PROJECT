@@ -29,6 +29,16 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 
 function countScores(people) {
   // Your code here
+  let newObj = {};
+
+  people.forEach(function(obj){
+   let objValues = Object.values(obj);
+
+   if(newObj[objValues[0]] === undefined){
+       newObj[objValues[0]] = objValues[1];
+        } else { newObj[objValues[0]] = objValues[1] + newObj[objValues[0]]}
+      })
+return newObj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

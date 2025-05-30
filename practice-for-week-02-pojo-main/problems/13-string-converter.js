@@ -11,9 +11,28 @@ console.log(stringConverter("banana")); // => {b: 1, a: 3, n: 2}
 console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 ***********************************************************************/
 
+
 function stringConverter(string) {
   // Your code here
+ let newObj = {};
+let strArr = string.split('');
+strArr.forEach(function(char){
+  newObj[char] = countChar(strArr, char);
+})
+return newObj;
 }
+//Helper-Function
+function countChar(arr, char){
+  let counter = 0;
+  arr.forEach(function(char2){
+    if (char === char2){
+      counter += 1
+    }
+  })
+  return counter;
+}
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = stringConverter;

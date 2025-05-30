@@ -13,7 +13,24 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 
 function arrayConverter(array) {
   // Your code here
+  let newObj = {};
+   array.forEach(function(word){
+  newObj[word] = countWord(array, word);
+})
+return newObj;
+
+}
+// Helper function
+function countWord(arr, word){
+  let counter = 0;
+  arr.forEach(function(word2){
+    if (word === word2){
+      counter += 1
+    }
+  })
+  return counter;
 }
 
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = arrayConverter;
+module.exportas = arrayConverter;
