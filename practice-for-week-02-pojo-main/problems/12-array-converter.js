@@ -33,4 +33,4 @@ function countWord(arr, word){
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exportas = arrayConverter;
+module.exports = arrayConverter;
